@@ -2,7 +2,12 @@ package edu.sfsu;
 
 public class App {
     public static void main( String[] args ) {
-        System.out.println( "BinaryTree");
+        Tree tree = new Tree();
+
+        tree.insert(100);
+        tree.insert(75);
+        tree.insert(25);
+        tree.insert(5);
     }
 }
 

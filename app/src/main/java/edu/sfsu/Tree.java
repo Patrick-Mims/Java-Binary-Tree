@@ -15,7 +15,36 @@ public class Tree {
 
     }
 
-    public void insert(int id, double dd) {
+    public void insert(int data) {
+        Node node = new Node();
 
+        node.data = data;
+
+        if(root == null) {
+            root = node;
+        } else {
+            Node current = root;
+            Node parent;
+
+            while(true) {
+                parent = current;
+
+                if(data < current.data) {
+                    current = current.leftChild;
+
+                    if(current == null) {
+                        parent.leftChild = node;
+                        return;
+                    }
+                } else {
+                    current = current.rightChild;
+
+                    if(current == null) {
+                        parent.rightChild = node;
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
