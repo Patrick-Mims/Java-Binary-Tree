@@ -8,6 +8,14 @@ public class App {
         tree.insert(75);
         tree.insert(25);
         tree.insert(5);
+
+        Node result = tree.find(25);
+
+        if(result != null) {
+            System.out.println("item found!");
+        } else {
+            System.out.println("Item NOT found");
+        }
     }
 }
 
